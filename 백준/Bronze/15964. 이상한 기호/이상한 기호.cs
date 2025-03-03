@@ -8,14 +8,19 @@ namespace ConsoleApp1
 {
 	class Program
 	{
-		static void Main(string[] args)
+		public long Cal()
 		{
 			string number = Console.ReadLine();
 			string[] numbers = number.Split(' ');
-			int a = int.Parse(numbers[0]);
-			int b = int.Parse(numbers[1]);
-
-			Console.WriteLine(((a + b) * (a - b)));
+			long a = int.Parse(numbers[0]);
+			long b = int.Parse(numbers[1]);
+			long result = ((a + b) * (a - b));
+			return result;
+		}
+		static void Main(string[] args)
+		{
+			Program p = new Program();
+			Console.WriteLine(p.Cal());
 		}
 	}
 }
